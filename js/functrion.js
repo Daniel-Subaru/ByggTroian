@@ -73,6 +73,8 @@ const handle = slider.querySelector('.slider-handle');
 const button = slider.querySelector('.slider-button');
 
 let isDragging = false;
+let startX = 0;
+let startY = 0;
 
 function moveSlider(clientX) {
     const sliderRect = slider.getBoundingClientRect();
@@ -85,7 +87,6 @@ function moveSlider(clientX) {
     button.style.left = `${percent}%`;
 }
 
-// Запобігання виділенню тексту при перетягуванні
 function preventSelection(e) {
     e.preventDefault();
 }
@@ -93,7 +94,9 @@ function preventSelection(e) {
 // Миша
 button.addEventListener('mousedown', (e) => {
     isDragging = true;
-    document.addEventListener('selectstart', preventSelection); // Блокуємо виділення
+    startX = e.clientX;
+    startY = e.clientY;
+    document.addEventListener('selectstart', preventSelection);
     button.style.cursor = 'grabbing';
 });
 
@@ -111,21 +114,36 @@ document.addEventListener('mousemove', (e) => {
 
 // Сенсорні екрани
 button.addEventListener('touchstart', (e) => {
-    isDragging = true;
-    e.preventDefault(); // Запобігаємо скролу сторінки
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
     button.style.cursor = 'grabbing';
 });
+
+button.addEventListener('touchmove', (e) => {
+    if (!startX) return;
+    
+    const touch = e.touches[0];
+    const diffX = Math.abs(touch.clientX - startX);
+    const diffY = Math.abs(touch.clientY - startY);
+    
+    // Якщо рух переважно вертикальний - це скрол
+    if (diffY > diffX) {
+        isDragging = false;
+        return;
+    }
+    
+    // Якщо рух переважно горизонтальний - це перетягування
+    isDragging = true;
+    e.preventDefault();
+    moveSlider(touch.clientX);
+}, { passive: false });
 
 document.addEventListener('touchend', () => {
     if (!isDragging) return;
     isDragging = false;
     button.style.cursor = 'ew-resize';
-});
-
-document.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    e.preventDefault(); // Запобігаємо скролу
-    moveSlider(e.touches[0].clientX);
+    startX = 0;
+    startY = 0;
 });
 
 });
