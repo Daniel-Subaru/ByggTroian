@@ -14,6 +14,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Бургер-меню
+const burgerBtn = document.querySelector('.burger-btn');
+const mainNav = document.querySelector('.main-nav');
+
+burgerBtn.addEventListener('click', () => {
+  // Перемикаємо класи для анімації
+  burgerBtn.classList.toggle('active');
+  mainNav.classList.toggle('active');
+  
+  // Блокуємо скрол сторінки при відкритому меню
+  document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : 'auto';
+});
+
+// Закриваємо меню при кліку на посилання
+document.querySelectorAll('.main-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    burgerBtn.classList.remove('active');
+    mainNav.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  });
+});
+
+
     // Фільтрація проектів
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
@@ -145,5 +168,5 @@ document.addEventListener('touchend', () => {
     startX = 0;
     startY = 0;
 });
-
+    
 });
