@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bygg Trojan</title>
+    <meta name="description"
+        content="Troian & HLP Bygg erbjuder professionella byggtjänster i Sverige, inklusive renoveringar, konstruktion och badrumsdesign.">
+    <meta name="keywords" content="byggtjänster, renovering, konstruktion, badrum, kök, Troian Bygg, HLP Bygg">
+    <meta name="author" content="Troian & HLP Bygg">
+    <title>Troian & HLP Bygg</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/icon/favicon.ico" type="image/x-icon">
 </head>
@@ -13,18 +17,16 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <a href="#home" class="logo">
-                <img src="img/icon/byggtrojan1.png" alt="" class="logo-img">
-                <span>ByggTrojan</span>
-            </a>
+                <a class="a1" href="#home">
+                    <img src="img/icon/byggtrojan1.png" alt="Troian & HLP Bygg Logo" class="logo-img">
+                    <span class="title1">Troian & HLP Bygg</span>
+                </a>
             </div>
-            <!-- Кнопка бургер-меню для мобільних -->
-            <button class="burger-btn" aria-label="Відкрити меню">
+            <button class="burger-btn" aria-label="Öppna menyn">
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
             </button>
-
             <nav class="main-nav">
                 <ul>
                     <li><a href="#home">Hem</a></li>
@@ -38,7 +40,7 @@
 
     <section id="home" class="hero">
         <div class="container">
-            <h1>Professionella byggtjänster</h1>
+            <h1>Professionella byggtjänster i Sverige</h1>
             <p>Kvalitet, pålitlighet, långtidsgaranti</p>
         </div>
     </section>
@@ -48,13 +50,13 @@
             <h2>Om oss</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Vi är byggföretaget "TroyanBygg", som har funnits på marknaden i över 15 år. Våra specialister -
-                    Dessa är erfarna yrkesmän som utför arbete av vilken komplexitet som helst.</p>
-                    <p>Våra principer: materialkvalitet, efterlevnad av deadlines, individuellt förhållningssätt till varje kund.
-                    </p>
+                    <p>Vi är byggföretaget "TroianBygg & HLP Bygg". Våra specialister är erfarna yrkesmän som utför
+                        arbete av vilken komplexitet som helst.</p>
+                    <p>Våra principer: materialkvalitet, efterlevnad av deadlines, individuellt förhållningssätt till
+                        varje kund.</p>
                 </div>
                 <div class="about-image">
-                    <img src="https://via.placeholder.com/500x300" alt="Наша команда">
+                    <img src="https://via.placeholder.com/500x300" alt="Vår byggteam">
                 </div>
             </div>
         </div>
@@ -65,58 +67,71 @@
             <h2>Våra projekt</h2>
             <div class="projects-filter">
                 <button class="filter-btn active" data-filter="all">Alla</button>
-                <button class="filter-btn" data-filter="renovation">Reparationer</button>
+                <button class="filter-btn" data-filter="renoveringar">Renoveringar</button>
                 <button class="filter-btn" data-filter="construction">Konstruktion</button>
-                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="design">Badrum</button>
+                <button class="filter-btn" data-filter="kok">Kök</button>
             </div>
-
+            <!--Project 1-->
             <div class="projects-grid">
-                <!-- Проект 1 -->
-                <div class="project-card" data-category="renovation">
+                <div class="project-card" data-category="renoveringar">
                     <div class="before-after-slider">
                         <div class="before">
-                            <img src="img/Project/beautiful_house_with_modern_renovation_for_advert_fbe7932d_7e29_ (2).png" alt="До ремонту">
+                            <img src="img/renovera/1.JPG" alt="Innan lägenhetsrenovering">
                         </div>
                         <div class="after">
-                            <img src="img/Project/beautiful_house_with_modern_renovation_for_advert_fbe7932d_7e29_ (3).png" alt="Після ремонту">
-                        </div>  
+                            <img src="img/renovera/2.JPG" alt="Efter lägenhetsrenovering">
+                        </div>
                         <div class="slider-handle"></div>
-                        <div class="slider-button" aria-label="Порівняння фото"></div>
+                        <div class="slider-button" aria-label="Jämför bilder innan och efter"></div>
                     </div>
-                    <h3>Ремонт квартири </h3>
-                    <p>Повний комплекс ремонтних робіт у 3-кімнатній квартирі.</p>
+                    <h3>Lägenhetsrenovering</h3>
+                    <p>Ett komplett utbud av husrenoveringar</p>
                 </div>
-
-                <!-- Проект 2 -->
+                <!--Project 2-->
                 <div class="project-card" data-category="construction">
                     <div class="before-after-slider">
                         <div class="before">
-                            <img src="https://via.placeholder.com/400x300?text=Пустир" alt="До будівництва">
+                            <img src="img/new-construction/1.jpg" alt="Innan stugbyggnation">
                         </div>
                         <div class="after">
-                            <img src="https://via.placeholder.com/400x300?text=Готовий+будинок" alt="Після будівництва">
+                            <img src="img/new-construction/2.jpg" alt="Efter stugbyggnation">
                         </div>
                         <div class="slider-handle"></div>
-                        <div class="slider-button"></div>
+                        <div class="slider-button" aria-label="Jämför bilder innan och efter"></div>
                     </div>
-                    <h3>Будівництво котеджу</h3>
-                    <p>Індивідуальний проект котеджу площею 250 м².</p>
+                    <h3>Stugbyggnation</h3>
+                    <p>Individuellt stugprojekt med en yta på 250 m².</p>
                 </div>
-
-                <!-- Проект 3 -->
+                <!--Project 3-->
                 <div class="project-card" data-category="design">
                     <div class="before-after-slider">
                         <div class="before">
-                            <img src="https://via.placeholder.com/400x300?text=Старе+приміщення" alt="До дизайну">
+                            <img src="img/bathroom/1.jpg" alt="Innan badrumsrenovering">
                         </div>
                         <div class="after">
-                            <img src="https://via.placeholder.com/400x300?text=Сучасний+інтер'єр" alt="Після дизайну">
+                            <img src="img/bathroom/2.jpg" alt="Efter badrumsrenovering">
                         </div>
                         <div class="slider-handle"></div>
-                        <div class="slider-button"></div>
+                        <div class="slider-button" aria-label="Jämför bilder innan och efter"></div>
                     </div>
-                    <h3>Дизайн інтер'єру офісу</h3>
-                    <p>Сучасний дизайн офісного приміщення у стилі лофт.</p>
+                    <h3>Badrum</h3>
+                    <p>Vackert i ett modernt badrum med olika stilar</p>
+                </div>
+                <!--Project 4-->
+                <div class="project-card" data-category="kok">
+                    <div class="before-after-slider">
+                        <div class="before">
+                            <img src="img/kok/1.jpg" alt="Innan köksrenovering">
+                        </div>
+                        <div class="after">
+                            <img src="img/kok/2.jpg" alt="Efter köksrenovering">
+                        </div>
+                        <div class="slider-handle"></div>
+                        <div class="slider-button" aria-label="Jämför bilder innan och efter"></div>
+                    </div>
+                    <h3>Kökrenovering</h3>
+                    <p>Modern köksdesign med högkvalitativa material</p>
                 </div>
             </div>
         </div>
@@ -125,20 +140,43 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>Kontakter</h2>
-            <div class="contact-info">
-                <p>Telefon: +46 73 929 6063</p>
-                <p>Email: troianbygg1@gmail.com</p>
-                <p>Adress:</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><strong>Email till Troian:</strong> troianbygg1@gmail.com</p>
+                    <p><strong>Email till HLP:</strong> hlpbygg@gmail.com</p>
+                    <p><strong>Telefon:</strong> +46 73 929 6063 - Roman</p>
+                    <p><strong>Telefon:</strong> +46 79 039 8695 - Pavlo</p>
+                </div>
+                <!-- Форма відправка-->
+                <form class="contact-form" action="https://formsubmit.co/daniel.babiychuk777@gmail.com" method="POST">
+                    <label for="name">Namn:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Meddelande:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Skicka</button>
+                    <!-- Додаткові налаштування FormSubmit -->
+                    <input type="hidden" name="_next" value= "/thank-you.html">
+                    <input type="hidden" name="_autoresponse" value="Tack för ditt meddelande! Vi kontaktar dig snart.">
+                </form>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Будівельна компанія "Trojan". Всі права захищені.</p>
+            <p>© Byggföretaget "Troian & HLP". Alla rättigheter reserverade.</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="img/icon/2021_Facebook_icon.svg.webp"
+                        alt=""></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="img/icon/Instagram_logo_2022.svg.webp"
+                        alt=""></a>
+            </div>
         </div>
     </footer>
 
+    <button class="to-top-btn" aria-label="Till toppen">↑</button>
     <script src="js/functrion.js"></script>
 </body>
 
